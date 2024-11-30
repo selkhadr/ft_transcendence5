@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="login.css"> -->
+    <title>Authentication</title>
+</head>
+<body>
+    <div class="authentication">
+        <div class="register">
+            <img src="../../game/img/logo.svg" alt="" srcset="">
+            <input type="text" id="re_name" placeholder="Enter your name", value="">
+            <input type="text" id="re_mail" placeholder="Enter your email", value="">
+            <input type="text" id="re_password" placeholder="enter your password" , value="">
+            <button class="registerx" onclick="register();">SIGN-UP</button>
+            <div class="or">
+                <div class="bar"></div>
+                <p>OR</p>
+                <div class="bar"></div>
+            </div>
+            <button class="intra" onclick="login();"><img src="../../game/img/42_icon.svg" alt="">SIGN-IN with intra</button>
+            
+            <div class="end">
+                <a href="http://">log in - and start playing</a>
+            </div>
+            
+        </div>
+            <!-- <br> -->
+        <div class="login">
+            <!-- <img src="../../game/img/logo.svg" alt="" srcset=""> -->
+            <input type="text" id="email" placeholder="email", value="logx@gmail.com">
+            <input type="text" id="password" placeholder="password" , value="eloualy">
+            <div class="forget_password">
+                <a href="">Forgot password?</a>
+            </div>
+            
+            <button class="loginx" onclick="login();">login</button>
+            <div class="or">
+                <div class="bar"></div>
+                <p>OR</p>
+                <div class="bar"></div>
+            </div>
+           
+            <button class="intra" onclick="login();"><img src="../../game/img/42_icon.svg" alt="">SIGN-IN with intra</button>
+            <button onclick="getProfile();">test</button>
+            <div class="end">
+                <a href="http://">i don't have an account create one</a>
+            </div>
+             
+        </div>
+            <!-- <br> -->
+            <button onclick="logout();">logout</button>
+    </div>
+</body>
+<script src="js.js">
+    
+</script>
+</html>
+
+

@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+    background-color: rgba(31, 30, 28, 1);
+}
+
+.choose {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: #bb8c08;
+    background-color: transparent;
+    font-size: 30px;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-weight: lighter;
+}
+
+.quit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("../sidebar/icons/cross.svg");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    border: #bb8b089d 2px solid;
+    border-radius: 20px;
+}
+
+.body-container > .local-container {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 90%;
+    margin: 2%;
+    border-radius: 20px;
+    border: #bb8b089d 3px solid;
+    box-shadow: 0px 4px 15px #705508;
+    border-bottom: #614905 10px solid;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.body-container > .local-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #b58604;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ping-image {
+    position: absolute;
+    filter: blur(4px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.local-container > .online-txt {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 50%;
+    color: #bb8c08;
+    transform: translateX(-50%);
+    font-family: 'Alfa Slab One', sans-serif;
+    background-color: transparent;
+    font-size: 45px;
+    z-index: 1;
+    text-shadow: 1px 1px 0 #614905,
+                 2px 2px 0 #614905,
+                 3px 3px 0 #614905,
+                 4px 4px 0 #614905,
+                 5px 5px 0 #614905,
+                 6px 6px 0 #614905,
+                 7px 7px 0 #614905;
+}
+
+.local-container > .shape {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: -100;
+}
+
+.local-hover {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-color: transparent;
+    filter: contrast(100%);
+}
+
+.local-container > .online-par {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 12%;
+    left: 50%;
+    color: #252522;
+    transform: translateX(-50%);
+    font-family: 'Alfa Slab One', sans-serif;
+    background-color: transparent;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* //////////////// */
+
+.body-container > .online-container {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 90%;
+    margin: 2%;
+    border-radius: 20px;
+    border: #bb8b089d 3px solid;
+    box-shadow: 0px 4px 15px #705508;
+    border-bottom: #614905 10px solid;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.body-container > .online-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #b58604;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ping-image {
+    position: absolute;
+    filter: blur(4px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.online-container > .online-txt {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 50%;
+    color: #bb8c08;
+    transform: translateX(-50%);
+    font-family: 'Alfa Slab One', sans-serif;
+    background-color: transparent;
+    font-size: 45px;
+    z-index: 1;
+
+    text-shadow: 1px 1px 0 #614905,
+    2px 2px 0 #614905,
+    3px 3px 0 #614905,
+    4px 4px 0 #614905,
+    5px 5px 0 #614905,
+    6px 6px 0 #614905,
+    7px 7px 0 #614905;
+}
+
+.online-container > .shape {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: -100;
+}
+
+.online-hover {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-color: transparent;
+    filter: contrast(400%);
+}
+
+.online-container > .online-par {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 12%;
+    left: 50%;
+    color: #252522;
+    transform: translateX(-50%);
+    font-family: 'Alfa Slab One', sans-serif;
+    background-color: transparent;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* //////////////// */
+
+.body-container > .bot-container {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 90%;
+    margin: 2%;
+    border-radius: 20px;
+    border: #bb8b089d 3px solid;
+    box-shadow: 0px 4px 15px #705508;
+    border-bottom: #614905 10px solid;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.body-container > .bot-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #b58604;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ping-image {
+    position: absolute;
+    filter: blur(4px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.bot-container > .online-txt {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 50%;
+    color: #bb8c08;
+    transform: translateX(-50%);
+    font-family: 'Alfa Slab One', sans-serif;
+    background-color: transparent;
+    font-size: 45px;
+    z-index: 1;
+
+    text-shadow: 1px 1px 0 #614905,
+        2px 2px 0 #614905,
+        3px 3px 0 #614905,
+        4px 4px 0 #614905,
+        5px 5px 0 #614905,
+        6px 6px 0 #614905,
+        7px 7px 0 #614905;
+}
+
+.bot-container > .shape {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: -100;
+}
+
+.online-hover {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-color: transparent;
+    filter: contrast(400%);
+}
+
+.bot-container > .online-par {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 12%;
+    left: 50%;
+    color: #252522;
+    transform: translateX(-50%);
+    font-family: 'Alfa Slab One', sans-serif;
+    background-color: transparent;
+    font-size: 14px;
+    z-index: 1;
+}

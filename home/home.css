@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #302E2B;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.home button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.home button:hover {
+    background-color: #d2b71e;
+    color: #302E2B;
+    transform: scale(1.1);
+}
+
+
+html, body { height: 100%; }
+
+body {
+	background: #262546;
+	overflow: hidden;
+}

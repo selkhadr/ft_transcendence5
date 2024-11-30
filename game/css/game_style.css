@@ -1,0 +1,254 @@
+.conatainer > .gametable
+{
+    /* background-color: #262522; */
+
+    background-color: #302E2B;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.conatainer > .gametable > .top
+{
+    width: 90%;
+    height: 10%;
+    /* border: 1px solid #ffffff; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.conatainer > .gametable > .top > .player_1
+{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid #66ff00; */
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    
+}
+.conatainer > .gametable > .top > .player_1 > img
+{
+    
+    height: 90%;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 7px;
+    /* margin-right: 10px; */
+}
+.conatainer > .gametable > .top > .player_1 > span
+{
+    color: #ffffff;
+    font-size: x-large;
+    font-weight: bold;;
+    margin-top: 10px;
+}
+
+.conatainer > .gametable > .top > .score
+{
+    width: 20%;
+    height: 60%;
+    border: 5px solid #FFB71A;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.conatainer > .gametable > .top > .score > span
+{
+    color: #ffffff;
+
+    font-size: xx-large;
+    font-weight: bold;;
+    margin-top: 10px;
+}
+
+.conatainer > .gametable > .top > .player_2
+{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid #FFB71A; */
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    /* align-items: center; */
+    justify-content: flex-end;
+}
+
+.conatainer > .gametable > .top > .player_2 > img
+{
+    
+    height: 90%;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.conatainer > .gametable > .top > .player_2 > span
+{
+    color: #ffffff;
+    font-size: x-large;
+    font-weight: bold;;
+    margin-top: 10px;
+}
+.conatainer > .gametable > .table
+{
+    width: 90%;
+    height: 45%;
+    max-width: 1000px;
+    max-height: 500px;
+    border: 5px solid #FFB71A;
+    background-color: #262522;
+    border-radius: 19px;
+}
+
+.conatainer > .gametable > .buttom
+{
+    width: 90%;
+    height: 10%;
+    /* border: 1px solid #ffffff; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conatainer > .gametable > .buttom > .player_1_option
+{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid #ff0000; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.conatainer > .gametable > .buttom > .player_1_option > .wall
+{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #FFB71A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conatainer > .gametable > .buttom > .player_1_option > .wall > img
+{
+    width: 60%;
+}
+
+.conatainer > .gametable > .buttom > .player_1_option > .speed
+{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #FFB71A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conatainer > .gametable > .buttom > .player_1_option > .speed > img
+{
+    width: 60%;
+}
+
+.conatainer > .gametable > .buttom > .player_1_option > .long_rockit
+{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #FFB71A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conatainer > .gametable > .buttom > .player_1_option > .long_rockit > img
+{
+    width: 80%;
+}
+
+.conatainer > .gametable > .buttom > .logo
+{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid #ff0000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conatainer > .gametable > .buttom > .logo > img
+{
+    width: 85%;
+}
+
+.conatainer > .gametable > .buttom > .player_2_option
+{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid #ff0000; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.conatainer > .gametable > .buttom > .player_2_option > .wall
+{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #FFB71A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conatainer > .gametable > .buttom > .player_2_option > .speed
+{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #FFB71A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conatainer > .gametable > .buttom > .player_2_option > .long_rockit
+{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #FFB71A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conatainer > .gametable > .buttom > .player_2_option > .wall > img
+{
+    width: 60%;
+}
+
+.conatainer > .gametable > .buttom > .player_2_option > .speed > img
+{
+    width: 60%;
+}
+
+.conatainer > .gametable > .buttom > .player_2_option > .long_rockit > img
+{
+    width: 80%;
+}

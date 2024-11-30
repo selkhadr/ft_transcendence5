@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./user-profile/head.css">
+        <link rel="stylesheet" type="text/css" href="./user-profile/body.css">
+        <link rel="stylesheet" type="text/css" href="./user-profile/sidebar.css">
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">  
+        <link href="https://fonts.google.com/share?selection.family=Alfa+Slab+One|Londrina+Solid:wght@100;300;400;900" rel="stylesheet">
+        <title>User Profile</title>
+    </head>
+<body>
+    <div class="head-container">
+            <div class="pfp-square">
+                <img src="/icons/profile_photo.svg" id="pfp" class="profile-picture">
+            </div>
+                <div class="content-container">
+                    <div class="first-last">
+                        
+                        <button class="edit"></button>
+
+                        <h3 id="first-last">First-name & last-name</h3>
+                    </div>
+                    <div class="username">
+                        <h1 id="username">Username</h1>
+                    </div>
+                    <button class="status" onclick="popBox()" id="status">Enter your status here...</button>
+                    <div class="status-container">
+                        <div class="online-container" style="display: none;" id="online">
+                            <div class="online-image"></div>
+                            <div class="status-text" id="online-text">Online</div>
+                        </div>
+                        <div class="offline-container" style="display: flex;" id="offline">
+                        <div class="offline-image"></div>
+                        <div class="status-text" id="offline-text">Offline</div>
+                        </div>
+                        <div class="time-container">
+                            <div class="time-image"></div>
+                            <div class="time-status" id="date">01/01/2024</div>
+                        </div>
+                        <div class="add-friend-container" style="display: none;">
+                            <button class="add-friend-image"></button>
+                            <button class="add-friend-status">Add</button>
+                        </div>
+                        <div class="sent-friend-container" style="display: none;">
+                            <div class="sent-friend-image"></div>
+                            <div class="sent-friend-status">Sent</div>
+                        </div>
+                        <div class="friend-container" style="display: none;">
+                            <div class="friend-image"></div>
+                            <div class="friend-status">Friends</div>
+                        </div>
+                        <div class="score-container">
+                            <div class="score-image"></div>
+                            <div class="score-status" id="score">10</div>
+                        </div>
+                    
+                    </div>
+                </div>
+    </div>
+    <div class="icons-container">
+        <div class="ping-container">
+            <button class="pingBtn" onclick="ShowPingContainer()">Ping-Pong</button>
+        </div>
+        <div class="xo-container">
+            <button class="xoBtn" onclick="ShowXOContainer()">x-o</button>
+        </div>
+    </div>
+    <div class="body-container">
+            <div class="column-container">
+                <div class="Games">Games</div>
+                <div class="Results">Results</div>
+                <div class="Accuracy">Accuracy</div>
+                <div class="Date">Date</div>
+            </div>
+            <div class="no-matches-container" style="display: flex;" id="no-matches-container">no matches yet.</div>
+            <div class="ping-content-container" id="content-container" style="display: none;">
+                <div class="stats-container" style="display: none;">
+                    <div class="games-container">
+                        <div class="games-icon">
+
+                            <div id="local-ic" class="games-image-local" style="display: none;"></div>
+                            <div id="local-txt" class="games-text-local" style="display: none;">LOCAL</div>
+
+                            <div id="bot-ic" class="games-image-bot" style="display: none;"></div>
+                            <div id="bot-txt" class="games-text-bot" style="display: none;">BOT</div>
+
+                            <div id="online-ic" class="games-image-online" style="display: none;"></div>
+                            <div id="online-txt" class="games-text-online" style="display: none;">ONLINE</div>
+
+                        </div>
+                        <div class="games-users">
+                            <div class="f-user">
+                                <div class="arrow_1"></div>
+                                <div class="first-user-text" id="first-user-name">Username_1</div>
+                            </div>
+                            <div class="sec-user">
+                                <div class="arrow_2"></div>
+                                <div class="second-user-text" id="second-user-name">Username_2</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="Results-container">
+                        <div class="res-num">
+                            <div class="f-user-score" id="f-user-score">1</div>
+                            <div class="sec-user-score" id="sec-user-score">1</div>
+                        </div>
+                        <div class="res-icon">
+                            <div class="res-image-minus" style="display: none;" id="minus"></div>
+                            <div class="res-image-plus" style="display: none;" id="plus"></div>
+                            <div class="res-image-equal" style="display: none;" id="equal"></div>
+                        </div>
+                    </div>
+
+                    <div class="Accuracy-container">
+                        <div class="f-user-accuracy" id="firstAcc">50%</div>
+                        <div class="sec-user-accuracy" id="secAcc">50%</div>
+                    </div>
+                    <div class="date-container" id="game-date">01/01/2024</div>
+                </div>
+            </div>
+            <div class="xo-content-container" style="display: none;" id="xo-content-container">
+                <div class="xo-stats-container" style="display: none;">
+                    <div class="games-container">
+                        <div class="games-icon">
+
+                            <div id="local-ic" class="games-image-local" style="display: none;"></div>
+                            <div id="local-txt" class="games-text-local" style="display: none;">LOCAL</div>
+
+                            <div id="bot-ic" class="games-image-bot" style="display: none;"></div>
+                            <div id="bot-txt" class="games-text-bot" style="display: none;">BOT</div>
+
+                            <div id="online-ic" class="games-image-online" style="display: none;"></div>
+                            <div id="online-txt" class="games-text-online" style="display: none;">ONLINE</div>
+
+                        </div>
+                        <div class="games-users">
+                            <div class="f-user">
+                                <div class="arrow_1"></div>
+                                <div class="first-user-text" id="first-user-name">Username_1</div>
+                            </div>
+                            <div class="sec-user">
+                                <div class="arrow_2"></div>
+                                <div class="second-user-text" id="second-user-name">Username_2</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="Results-container">
+                        <div class="res-num">
+                            <div class="f-user-score" id="f-user-score">1</div>
+                            <div class="sec-user-score" id="sec-user-score">1</div>
+                        </div>
+                        <div class="res-icon">
+                            <div class="res-image-minus" style="display: none;" id="minus"></div>
+                            <div class="res-image-plus" style="display: none;" id="plus"></div>
+                            <div class="res-image-equal" style="display: none;" id="equal"></div>
+                        </div>
+                    </div>
+
+                    <div class="Accuracy-container">
+                        <div class="f-user-accuracy" id="firstAcc">50%</div>
+                        <div class="sec-user-accuracy" id="secAcc">50%</div>
+                    </div>
+                    <div class="date-container" id="game-date">01/01/2024</div>
+                </div>
+            </div>
+    </div>
+    <div class="sidebar-container">
+        <div class="small-sidebar-container">
+            <button class="small-sidebar-icon"></button>
+        </div>
+        <div class="logo-container"></div>
+        <div class="menu-container">
+            <div class="user-chat-container">
+                <button class="user-chat-icon"></button>
+                <button class="user-chat-text">Chat</button>
+            </div>
+            <div class="user-settings-container">
+                <button class="user-settings-icon"></button>
+                <button class="user-settings-text">Settings</button>
+            </div>
+            <div class="user-profile-container">
+                <button class="user-profile-icon"></button>
+                <button class="user-profile-text">Profile</button>
+            </div>
+        </div>
+        <div class="logout-wrapper">
+            <div class="logout-container">
+                <button class="logout-icon"></button>
+                <button class="logout-text">Log out</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup-container" style="display: none;">
+        <div class="popup-box">
+                <p class="enter">Enter your status:</p>
+                <textarea class="input-text" id="textarea" maxlength="30"></textarea>
+                <div class="counter">
+                    <p class="counter_characters">0</p><p>/</p><p>30</p>
+                </div>
+            <div class="update-cancel">
+                <button class="cancel">Cancel</button>
+                <button class="enter">Submit</button>
+            </div>
+        </div>
+    </div>
+<script src="./user-profile/script.js"></script>
+</body>
+</html>

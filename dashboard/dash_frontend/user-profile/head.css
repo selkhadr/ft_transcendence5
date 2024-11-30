@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+profile-elements
+{
+    background-color: rgba(38, 37, 34, 1);
+    font-family: 'Alfa Slab One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+body {
+    background-color: rgba(38, 37, 34, 1);
+    font-family: 'Alfa Slab One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.head-container{
+    background: rgba(31, 30, 28, 1);
+    border-radius: 25px;
+    width: 650px;
+    height: 240px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px 0 #e8ac0798;
+
+}
+
+.head-container >  .pfp-square {
+    border-radius: 14px;
+    background: url('../icons/profile_photo.svg') no-repeat center center / cover;
+    border: 5px solid #bb8c08;
+    width: 200px;
+    height: 200px;
+    margin-left: 15px;
+}
+
+.pfp-square >  .profile-picture {
+    border-radius: 9px;
+    width: 200px;
+    height: 200px;
+}
+
+.head-container > .content-container {
+    width: 60%;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.first-last {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: large;
+    color: #e4e4e4;
+    /* margin-top: 30px; */
+    width: 100%;
+    height: 20%;;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+}
+
+fname {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: large;
+    color: #e4e4e4;
+    margin-top: 30px;
+    width: 100%;
+    height: 20%;;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+}
+
+.first-last > .edit {
+    position: absolute;
+    right: 7px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../icons/edit_ic.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.username {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: #bb8c08;
+    font-size: 11%;
+}
+
+uname {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: #bb8b08d4;
+    font-size: medium;
+}
+
+.status {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: rgb(132, 132, 132);
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+stts {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: rgb(132, 132, 132);
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+stts:empty::before {
+    content: "Enter your status here...";
+    color: rgb(132, 132, 132);
+}
+
+.status-container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    width: 300px;
+    height: 100px;
+    gap: 35px;
+    padding: 10px;
+}
+
+.status-container > .online-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    height: 100px;
+    width: 90px;
+}
+
+.online-container > .online-image {
+    background-image: url('../icons/online_ic.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.status-container > .online-container > .status-text {
+    color: #bb8c08;
+    font-size: 14px;
+}
+
+.status-container > .time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    height: 100px;
+    width: 90px;
+    font-size: 13px;
+}
+
+.time-container > .time-image {
+    background-image: url('../icons/clock-five.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 29px;
+    margin: 10px;
+}
+
+.status-container > .time-container > .time-status {
+    color: #bb8c08;
+    font-size: 14px;
+}
+
+time {
+    color: #bb8c08;
+    font-size: 14px;
+}
+
+.status-container > .friend-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    height: 100px;
+    width: 90px;
+}
+
+.friend-container > .friend-image {
+    background-image: url('../icons/friends_ic.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 29px;
+    margin: 10px;
+}
+
+.status-container > .friend-container > .friend-status {
+    color: #bb8c08;
+    font-size: 13px;
+}
+
+.status-container > .add-friend-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    height: 100px;
+    width: 90px;
+}
+
+.add-friend-container > .add-friend-image {
+    background-image: url('../icons/add.svg');
+    width: 30px;
+    height: 29px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.add-friend-container > .add-friend-image:hover {
+    background-image: url('../icons/add\ \(1\).png'); 
+}
+
+.status-container > .add-friend-container > .add-friend-status {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: #bb8c08;
+    font-size: 13px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.status-container > .sent-friend-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    height: 100px;
+    width: 90px;
+}
+
+.sent-friend-container > .sent-friend-image {
+    background-image: url('../icons/check-circle.svg');
+    width: 30px;
+    height: 29px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+}
+
+.status-container > .sent-friend-container > .sent-friend-status {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: #bb8c08;
+    font-size: 13px;
+    background-color: transparent;
+    border: none;
+}
+
+.status-container > .score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    height: 100px;
+    width: 90px;
+}
+
+.score-container > .score-image {
+    background-image: url('../icons/trophy.svg');
+    width: 30px;
+    height: 29px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+}
+
+.status-container > .score-container > .score-status {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: #bb8c08;
+    font-size: 13px;
+    border: none;
+}
+
+scr {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: #bb8c08;
+    font-size: 14px;
+    border: none;
+}
+
+.status-container > .offline-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    width: 90px;
+}
+
+.offline-container > .offline-image {
+    background-image: url('../icons/offline_ic.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.status-container > .offline-container > .status-text {
+    color: #bb8c08;
+    font-size: 14px;
+}

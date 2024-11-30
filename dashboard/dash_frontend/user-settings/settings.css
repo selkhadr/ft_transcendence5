@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 25px;
+    background-color: rgba(31, 30, 28, 1);
+    margin: 50px;
+    width: 700px;
+    height: 550px;
+}
+
+.body-container > .column-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding-top: 30px;
+    width: 100%;
+}
+
+/* /////////////////////// */
+
+.column-container > .edit-profile-container {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.edit-profile-container > .edit-profile {
+    width: 50%;
+    height: 50px;
+    font-size: 11px;
+    background-color: #bb8c08;
+    color: rgb(45, 44, 42);
+    border: #bb8c08 1px solid;
+    border-radius: 10px;
+    font-family: 'Alfa Slab One', sans-serif;
+    cursor: pointer;
+}
+
+.unactive-button {
+    color: #bb8c08 !important;
+    background-color: transparent !important;
+}
+
+/* /////////////////////// */
+
+.column-container > .change-password-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+
+.change-password-button-container > .change-password {
+    width: 50%;
+    height: 50px;
+    font-size: 11px;
+    background-color: transparent;
+    color: #bb8c08;
+    border: #bb8c08 1px solid;
+    border-radius: 10px;
+    font-family: 'Alfa Slab One', sans-serif;
+    cursor: pointer;
+}
+
+.active-button {
+    color: rgb(45, 44, 42) !important;
+    background-color: #bb8c08 !important;
+    border-color: #bb8c08 !important;
+}
+
+/* /////////////////////// */
+
+.body-container > .change-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: center;
+    width: 700px;
+    height: 550px;
+    margin-top: 50px;
+    gap: 5px;
+}
+
+.change-name-container > .first-name {
+    color: #bb8c08;
+    font-size: small;
+    margin-left: 40px;
+}
+
+.name-area-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 90%;
+    height: 45px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: #684d04 solid;
+    margin-bottom: 50px;
+}
+
+.name-icon {
+    position: absolute;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.name-area {
+    overflow: hidden;
+    width: 90% !important;
+    height: 35px !important;
+    border-radius: 25px ;
+    text-align: start;
+    flex-grow: 1;
+    margin-left: 40px;
+    padding-left: 7px;
+    padding-top: 11px;
+    color: aliceblue;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    resize: none;
+}
+
+/* /////////////////////// */
+
+.change-name-container > .username {
+    /* color: #bb8c08; */
+    font-size: small;
+    margin-left: 40px;
+}
+
+.username-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 90%;
+    height: 45px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: #684d04 solid;
+}
+
+.name-icon {
+    position: absolute;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.username-area {
+    overflow: hidden;
+    width: 90% !important;
+    height: 35px !important;
+    border-radius: 25px ;
+    text-align: start;
+    flex-grow: 1;
+    margin-left: 40px;
+    padding-left: 7px;
+    padding-top: 11px;
+    color: aliceblue;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    resize: none;
+}
+
+.change-name-container > .name-status-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 700px;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.name-status-container > .stats-text {
+    color: #3a7642;
+    font-size: 10px;
+}
+
+/* /////////////////////// */
+
+.change-password-container > .update-cancel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 75px;
+    gap: 5px;
+}
+
+.update-cancel > .enter {
+    width: 90px;
+    height: 50px;
+    background-color: #bb8c08;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 12px;
+    color: #2a2929;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+.update-cancel > .cancel {
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 11px;
+    color: #bb8c08;
+    border: none;
+    cursor: pointer;
+}
+
+/* /////////////////////// */
+
+.change-name-container > .update-delete {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 700px;
+    height: 80px;
+    gap: 5px;
+}
+
+.update-delete > .enter {
+    width: 90px;
+    height: 50px;
+    background-color: #bb8c08;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 12px;
+    color: #2a2929;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+.update-delete > .delete {
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 11px;
+    color: #bb8c08;
+    border: none;
+    cursor: pointer;
+}
+
+/* /////////////////////// */
+
+.body-container > .change-password-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+    height: 550px;
+}
+
+.change-password-container > .old-password {
+    color: #bb8c08;
+    font-size: small;
+    margin-left: 40px;
+}
+
+.change-password-container > .old-pass-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 640px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: #684d04 solid;
+    margin-bottom: 50px;
+}
+
+.old-pass-wrapper > .old-pass-area {
+    overflow: hidden;
+    width: 90% !important;
+    height: 35px !important;
+    border-radius: 25px ;
+    text-align: start;
+    flex-grow: 1;
+    margin-left: 10px;
+    padding-left: 7px;
+    color: rgb(240, 248, 255);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-top: 4px;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 15px;
+    resize: none;
+}
+
+p{
+    display: inline;
+    color: #bb8c08;
+    font-size: 15px;
+    color: none;
+}
+
+p1{
+    display: none;
+    font-size: 10px;
+    color: rgba(152, 0, 0, 0.773);
+    font-style: italic;
+}
+
+/* /////////////////////// */
+
+.change-password-container > .new-password {
+    color: #bb8c08;
+    font-size: small;
+    margin-left: 40px;
+}
+
+.change-password-container > .new-pass-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 640px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: #684d04 solid;
+    margin-bottom: 50px;
+}
+
+.new-pass-area {
+    overflow: hidden;
+    width: 90% !important;
+    height: 35px !important;
+    border-radius: 25px;
+    text-align: start;
+    flex-grow: 1;
+    margin-left: 10px;
+    padding-left: 7px;
+    color: aliceblue;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-top: 4px;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 14px;
+    resize: none;
+}
+
+/* /////////////////////// */
+
+.change-password-container > .repeat-new-password {
+    color: #bb8c08;
+    font-size: small;
+    margin-left: 40px;
+}
+
+.change-password-container > .repeat-new-password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 640px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: #684d04 solid;
+}
+
+.repeat-new-password-area {
+    overflow: hidden;
+    width: 90% !important;
+    height: 35px !important;
+    border-radius: 25px ;
+    text-align: start;
+    flex-grow: 1;
+    margin-left: 10px;
+    padding-left: 7px;
+    color: aliceblue;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-top: 4px;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 15px;
+    resize: none;
+}
+
+/* /////////////////////// */
+
+.toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 30px;
+}
+
+.toggle-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px
+}
+
+.old-pass-wrapper, .new-pass-wrapper, .repeat-new-password-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.change-name-container, .change-password-container {
+    display: none;
+}
+
+/* /////////////////////// */
+
+.change-password-container > .password-status-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 700px;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.password-status-container > .stats-text {
+    color: #3a7642;
+    font-size: 10px;
+}
+
+/* /////////////////////// */
+
+@keyframes glitch
+{
+    0% {
+            transform: translateX(0px);
+            border-color: rgb(152, 0, 0);
+        }
+
+    50% {
+            transform: translateX(20px);
+            border-color: rgb(152, 0, 0);
+        }
+
+    100% {
+            transform: translateX(0px);
+            border-color: rgb(152, 0, 0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

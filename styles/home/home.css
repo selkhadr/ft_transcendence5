@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+    background-color: rgba(31, 30, 28, 1);
+}
+
+.head-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    background: transparent;
+}
+
+.head-container > .lang-mode-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-self: flex-end;
+    position: absolute;
+    top: 0;
+}
+
+.lang-mode-container > .lang-container {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    margin: 17px;
+    width: 32px;
+}
+
+.lang-container > .select-lang {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url('../icons/english.svg');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.lang-container > .lang-option {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    right: 0px;
+    background-color: rgba(20, 20, 19, 0.656);
+    padding: 10px;
+    border-radius: 14px;
+    background-image: url('../icons/french.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    cursor: pointer;
+}
+
+.fade-in {
+    animation: fade-in 0.2s linear 1 forwards;
+}
+
+.fade-out {
+    animation: fade-out 0.2s linear 1 forwards;
+}
+
+#select-mode {
+    transition: background-image 0.8s ease-in-out;
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.lang-option ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lang-option li {
+    margin: 5px 0;
+}
+
+.lang-mode-container > .mode-container {
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    margin: 17px;
+    width: 32px;
+}
+
+.mode-container > .select-mode {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url('../icons/light.svg');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 90%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #bb8c08; }
+}
+
+.head-container > .welcome-txt {
+    display: flex;
+    position: relative;
+    text-align: center;
+    background-color: transparent;
+    color: #bb8c08;
+    font-size: 40px;
+    font-family: 'Alfa Slab One', sans-serif;
+    z-index: 1;
+    overflow: hidden;
+    border-right: .15em solid #bb8c08;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    max-width: 350px;
+    animation:
+        typewriter 4s steps(40, end) 1,
+        blink-caret .75s step-end infinite;
+}
+
+.head-container > .welcome-txt2 {
+    display: flex;
+    position: relative;
+    text-align: center;
+    color: #916c06;
+    background-color: transparent;
+    font-size: 14px;
+    font-family: 'Alfa Slab One', sans-serif;
+    z-index: 1;
+}
+
+.head-container > .start-playing {
+    width: 200px;
+    height: 90px;
+    background-color: #bb8c08;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 15px;
+    color: rgb(45, 44, 42);
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    z-index: 1;
+    border-bottom: #987107 7px solid;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 20px;
+    text-shadow: #ebad0170;
+}
+
+.head-container > .start-playing:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.ping-image {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    /* margin-right: 5px; */
+    background-color: transparent;
+}
+
+/* //////////LOGOUT_MODAL///////// */
+
+.logoutpop-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.logoutpop-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.logoutpop-container > .logoutpop-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 500px;
+    height: 165px;
+    margin-top: 20px;
+    gap: 5px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px #7c5c03;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logoutpop-box-animate-up {
+    animation: popup 0.35s ease-in-out;
+}
+
+.logoutpop-box-animate-down {
+    animation: popout 0.25s ease-in-out;
+}
+
+.logoutpop-box > .enter {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 11px;
+    color: #bb8c08;
+}
+
+.logoutpop-box > .logoutpop-text{
+    font-family: 'Alfa Slab One', sans-serif;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #bb8c08;
+    text-align: center;
+    background-color: transparent;
+}
+
+.logoutpop-box > .update-cancel-logout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 400px;
+    height: 50px;
+    gap: 5px;
+}
+
+.update-cancel-logout > .enter-log {
+    width: 80px;
+    height: 40px;
+    background-color: #bb8c08;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 12px;
+    color: #2a2929;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+.update-cancel-logout > .cancel-log {
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 11px;
+    color: #bb8c08;
+    border: 3px #0d0c0c;
+    cursor: pointer;
+}
+
+.popup-box > .counter{
+    float: right;
+    display: flex;
+    font-family: 'Alfa Slab One', sans-serif;
+    color: #bb8c08;
+    margin-left: 440px;
+}
+
+.popup-box > .counter p{
+    font-size: 12px !important;
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}

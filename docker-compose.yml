@@ -1,0 +1,119 @@
+version: '3'
+
+services:
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  db:
+    image: postgres
+    container_name: db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+
+  match_history:
+    build: ./match_history
+    image: match_history
+    container_name: match_history
+    ports:
+      - "8000:8000"
+    volumes:
+      - matches-volume:/match_history
+    environment:
+      HOST_MACHINE_IP: ${HOST_MACHINE_IP}
+
+  authentication:
+    build: ./authentication
+    image: authentication
+    container_name: authentication
+    ports:
+      - "8001:8001"
+    volumes:
+      - authentication-volume:/authentication
+    depends_on:
+      - match_history
+      - db
+    environment:
+      HOST_MACHINE_IP: ${HOST_MACHINE_IP}
+
+  gamebackend:
+    build: ./gamebackend
+    image: gamebackend
+    container_name: gamebackend
+    ports:
+      - "8002:8002"
+    volumes:
+      - game:/gamebackend
+    depends_on:
+      - match_history
+      - authentication
+    environment:
+      HOST_MACHINE_IP: ${HOST_MACHINE_IP}
+
+  dashboard:
+    build: ./dashboard/dash_env
+    image: dashboard
+    container_name: dashboard
+    ports:
+      - "8004:8004"
+    volumes:
+      - dashboard-volume:/dashboard/dash_env
+    depends_on:
+      - match_history
+      - db
+    restart: always
+    environment:
+      HOST_MACHINE_IP: ${HOST_MACHINE_IP}
+
+  chat_project:
+    build: ./chat_project
+    image: chat_project
+    container_name: chat_project
+    ports:
+      - "8005:8005"
+    volumes:
+      - chat_project-volume:/chat_project
+    depends_on:
+      - match_history
+      - db
+    restart: always
+    environment:
+      HOST_MACHINE_IP: ${HOST_MACHINE_IP}
+
+volumes:
+  matches-volume:
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "/Users/selkhadr/Desktop/ft_transcendence/match_history"
+
+  authentication-volume:
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "/Users/selkhadr/Desktop/ft_transcendence/authentication"
+
+  game:
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "/Users/selkhadr/Desktop/ft_transcendence/gamebackend"
+
+  dashboard-volume:
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "/Users/selkhadr/Desktop/ft_transcendence/dashboard/dash_env"
+
+  chat_project-volume:
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "/Users/selkhadr/Desktop/ft_transcendence/chat_project"
+

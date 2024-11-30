@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    width: auto;
+    height: 100%;
+    background-image: url("../img/backround.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(15px);
+}
+.conatainer
+{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.menu
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	/* display: none; */
+}
+
+.selectgame
+{
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+}
+
+
+.selectgame > .card
+{
+    padding: 10px;
+    margin: 10px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+
+    backdrop-filter: blur(100px);
+    background-size: cover;
+}
+
+.b_bot
+{
+    background-image: url("../img/bot_blor.jpg");
+   
+}
+.b_online
+{
+    background-image: url("../img/online_blor.png");
+}
+.b_local
+{
+    background-image: url("../img/local_blor.png");
+}
+.selectgame > .card > p
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    color: rgb(226, 222, 222);
+    text-align: center;
+    background-color: #00000071;
+    border-radius: 10px;
+    padding: 10px;
+}
+.selectgame > .card > button
+{
+    width: 90%;
+    height: 50px;
+    background-color: #FFB71A;
+    border: solid 1px black;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+.selectgame > .card > button:hover
+{
+    background-color: #FFD700;
+}
+
+/* select player style start */
+.select_player
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	height: 100%;
+	width: 100%;
+	max-width: 1200px;
+    position: relative;
+
+}
+
+.select_player > .player 
+{
+	width: 40%;
+	height: 40%;
+	/* background-color: #ff1a1a; */
+	border-radius: 10px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+.select_player > .player > .player_1
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.select_player > .player > .player_2
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.select_player > .player > .player_2 > .img1
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    animation: player_animation_img1 0.25s ease 4;
+    top: 0;
+    
+}
+.select_player > .player > .player_2 > .img2
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: -200%;
+    animation: player_animation_img2 0.25s ease 4;
+    top: 0%;
+    
+}
+
+
+.select_player > .player > .threangl
+{
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -125%) rotate(0deg);
+    animation: threanglanimation 1s ease infinite;
+}
+
+.select_player > .player > h3
+{
+    font-size: xx-large;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: rgb(226, 222, 222);
+    text-align: center;
+    background-color: #d89d1d;
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 85%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select_player > .vs
+{
+    border-radius: 10px;
+    width: 25%;
+    height: 25%;
+    /* background-color: aqua; */
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: vsanimation 1s ease infinite;
+}
+
+@keyframes vsanimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.07);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes threanglanimation {
+    0% {
+        transform: translate(-50%, -125%);
+    }
+    50% {
+        transform: translate(-50%, -100%);
+    }
+
+    100% {
+        transform: translate(-50%, -125%);
+    }
+}
+
+
+@keyframes player_animation_img1 {
+    0% {
+        top : -100%;
+        content: url("../img/player_1.svg");
+    }
+    25% {
+        top : 0%;
+        content: url("../img/player_2.svg");
+    }
+    50% {
+        top : 100%;
+        content: url("../img/player_3.svg");
+    }
+    75% {
+        top : 200%;
+        content: url("../img/player_4.svg");
+    }
+    100% {
+        top : 100%;
+        content: url("../img/player_5.svg");
+    }
+    
+}
+
+@keyframes player_animation_img2 {
+    0% {
+        top : -100%;
+        content: url("../img/player_5.svg");
+    }
+    25% {
+        top : -200%;
+        content: url("../img/player_4.svg");
+    }
+    50% {
+        top : -100%;
+        content: url("../img/player_3.svg");
+    }
+    75% {
+        top : 0%;
+        content: url("../img/player_2.svg");
+    }
+    100% {
+        top : 0%;
+        content: url("../img/player_3.svg");
+    }
+}
